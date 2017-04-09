@@ -1,13 +1,35 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context="com.jaxsen.xianghacaipu.ui.cook.fragment.CookFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="60dp"
+        android:background="@color/colorOrange"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center_vertical"
+            android:text="未读"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
