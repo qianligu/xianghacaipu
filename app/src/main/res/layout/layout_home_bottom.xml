@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_home_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/rg_layout_home_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/cook_rb"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/cook_selector"
+            android:text="学做菜" />
+
+        <RadioButton
+            android:id="@+id/food_rb"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/food_selector"
+            android:text="美食圈" />
+
+        <ImageView
+            android:id="@+id/post_iv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/i_post_tie" />
+
+        <RadioButton
+            android:id="@+id/message_rb"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/message_selector"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/mine_rb"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/mine_selector"
+            android:text="我的" />
+    </RadioGroup>
+</LinearLayout>
