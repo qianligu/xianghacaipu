@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/info_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:layout_margin="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/info_img"
+        android:text="昵称"
+        android:textColor="#f00" />
+
+    <TextView
+        android:id="@+id/info_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_name"
+        android:layout_toRightOf="@id/info_img"
+        android:text="时间"
+        android:textColor="@color/colorGray"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="42dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/guanzhu_shap"
+        android:drawableLeft="@mipmap/dish_follow_a"
+        android:text="关注"
+        android:textColor="@color/colorOrange"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_img"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="17sp"
+        android:textColor="@color/colorBlack"
+        android:text="文章" />
+
+    <LinearLayout
+        android:id="@+id/info_images"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/info_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/info_image1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/info_image2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/info_image3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_three"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/info_images"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/info_looking"
+            android:paddingLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/z_user_icon_unlook_pass"
+            android:gravity="center"
+            android:text="访问" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="#dcdcdc"/>
+
+        <TextView
+            android:id="@+id/info_comment"
+            android:paddingLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/z_quan_home_body_ico_message"
+            android:gravity="center"
+            android:text="评论" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="#dcdcdc"/>
+        <CheckBox
+            android:id="@+id/info_dianzan"
+            android:paddingLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/dianzan_selector"
+            android:gravity="center"
+            android:text="点赞" />
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/bottom_three"
+        android:background="#e3dbab" />
+
+
+</RelativeLayout>

@@ -1,18 +1,19 @@
 package com.jaxsen.xianghacaipu.ui.food.fragment;
 
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.GridView;
 
 import com.jaxsen.xianghacaipu.R;
+import com.jaxsen.xianghacaipu.R2;
 import com.jaxsen.xianghacaipu.ui.food.adapter.GrideAdapter;
+import com.jaxsen.xianghacaipu.ui.food.adapter.NewRecyclerAdapter;
 import com.jaxsen.xianghacaipu.ui.food.bean.ParseNew;
 import com.jaxsen.xianghacaipu.ui.food.contract.FoodGetData;
 import com.jaxsen.xianghacaipu.ui.food.model.DataModel;
 import com.jaxsen.xianghacaipu.ui.food.presenter.DataPresenter;
 import com.rock.mvplibrary.base.BaseFragment;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 
@@ -24,8 +25,10 @@ public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implement
     @BindView(R.id.food2_grid)
     GridView mGridView;
 
-
+    @BindView(R2.id.food2_recyclerView)
+    RecyclerView mRecyclerView;
     private GrideAdapter GridAdapter;
+    private NewRecyclerAdapter mRadapter;
 
     @Override
     protected int getLayoutId() {
@@ -40,9 +43,11 @@ public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implement
 
     @Override
     public void initView() {
-
         GridAdapter = new GrideAdapter(getActivity(),null);
         mGridView.setAdapter(GridAdapter);
+
+        mRadapter = new NewRecyclerAdapter(getActivity(),null);
+        mRecyclerView.setAdapter(mRadapter);
     }
 
 
@@ -67,5 +72,6 @@ public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implement
         Log.e(TAG, "returnList: " +parseNew.getRes());
 
         GridAdapter.addRes(parseNew.getData().getData().get(0).getList());
+        mRadapter.upDataRes(parseNew.getData().getData());
     }
 }
