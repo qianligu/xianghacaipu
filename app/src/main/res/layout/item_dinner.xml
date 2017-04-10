@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_dinner_big_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/i_loading" />
+
+    <ImageView
+        android:id="@+id/item_dinner_small_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="170dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/i_loading" />
+
+    <ImageView
+        android:id="@+id/item_dinner_vip"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="220dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/z_user_gourmet_ico" />
+
+    <TextView
+        android:id="@+id/item_dinner_name"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/item_dinner_small_image"
+        android:layout_marginLeft="10dp"
+        android:text="name"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/item_dinner_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_dinner_allClick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="allClick"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_dinner_favorites"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="favorites"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_dinner_nickName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right"
+            android:text="nickName"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_dinner_self"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorOrange"
+        android:gravity="center"
+        android:text="独家" />
+</RelativeLayout>

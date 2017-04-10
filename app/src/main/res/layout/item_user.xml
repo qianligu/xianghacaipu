@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    android:layout_height="70dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_user_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/i_loading" />
+
+    <ImageView
+        android:id="@+id/item_user_isVip"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/z_user_gourmet_ico" />
+
+    <TextView
+        android:id="@+id/item_user_nickName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/item_user_image"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="nickName"
+        android:textSize="10dp" />
+</RelativeLayout>

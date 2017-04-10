@@ -50,7 +50,7 @@ public class BannerList {
 
         private String proBitPage;
         @SerializedName("recommend")
-        private List<bannerData> bannerData;
+        private List<BannerData> BannerData;
         @SerializedName("activeUser")
         private List<userData> UserData;
         @SerializedName("nous")
@@ -68,12 +68,12 @@ public class BannerList {
             this.proBitPage = proBitPage;
         }
 
-        public List<bannerData> getBannerData() {
-            return bannerData;
+        public List<BannerData> getBannerData() {
+            return BannerData;
         }
 
-        public void setBannerData(List<bannerData> bannerData) {
-            this.bannerData = bannerData;
+        public void setBannerData(List<BannerData> BannerData) {
+            this.BannerData = BannerData;
         }
 
         public List<userData> getUserData() {
@@ -116,7 +116,7 @@ public class BannerList {
             this.adTieInfo = adTieInfo;
         }
 
-        public static class bannerData {
+        public static class BannerData {
             /**
              * title : 早餐食谱
              * date : 四月十日

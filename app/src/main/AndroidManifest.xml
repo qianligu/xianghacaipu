@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.food.activity.TuijianAllActivity"></activity>
+        <activity android:name=".ui.cook.activity.FoodVodieActivity" />
+        <activity android:name=".ui.cook.activity.DinnerActivity"></activity>
     </application>
 
 </manifest>
