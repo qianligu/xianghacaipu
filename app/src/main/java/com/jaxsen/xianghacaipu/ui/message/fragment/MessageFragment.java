@@ -4,7 +4,7 @@ import com.jaxsen.xianghacaipu.R;
 import com.rock.mvplibrary.base.BaseFragment;
 
 
-
+//消息部分
 public class MessageFragment extends BaseFragment {
     public static final String TAG = MessageFragment.class.getName();
 
