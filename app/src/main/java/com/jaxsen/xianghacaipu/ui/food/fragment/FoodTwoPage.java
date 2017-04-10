@@ -16,9 +16,6 @@ import java.util.List;
 
 import butterknife.BindView;
 
-/**
- * Created by ALong on 2017/4/10.
- */
 
 public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implements FoodGetData.View {
 
