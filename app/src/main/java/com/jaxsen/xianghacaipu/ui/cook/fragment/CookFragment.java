@@ -4,7 +4,7 @@ package com.jaxsen.xianghacaipu.ui.cook.fragment;
 import com.jaxsen.xianghacaipu.R;
 import com.rock.mvplibrary.base.BaseFragment;
 
-//
+
 public class CookFragment extends BaseFragment {
     public static final String TAG = CookFragment.class.getName();
 
