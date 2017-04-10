@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <TextView
+            android:id="@+id/food2_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="推荐圈子"
+            android:textColor="@color/colorGray"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/food2_tuijian_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/enter_matchwords_item"
+            android:text="全部"
+            android:textColor="@color/colorGray"
+            android:textSize="15sp" />
+            <GridView
+                android:id="@+id/food2_grid"
+                android:horizontalSpacing="1dp"
+                android:verticalSpacing="1dp"
+                android:stretchMode="columnWidth"
+                android:scrollbars="none"
+                android:layout_below="@id/food2_tuijian"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:numColumns="3" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#e3dbab" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/food2_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

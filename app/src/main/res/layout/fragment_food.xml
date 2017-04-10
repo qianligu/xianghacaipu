@@ -1,13 +1,61 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
     tools:context="com.jaxsen.xianghacaipu.ui.cook.fragment.CookFragment">
 
-    <TextView
+    <RelativeLayout
+        android:background="@color/colorOrange"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="55dp">
+        <!--
+            左边菜单按钮，右边搜索按钮，中间标题或者indicator
+        -->
 
-</FrameLayout>
+
+        <ImageView
+            android:id="@+id/main_search"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/home_search"/>
+
+        <FrameLayout
+            android:id="@+id/food_page_title"
+            android:layout_width="160dp"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/food_page_find"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:text="发现"/>
+            <TextView
+                android:id="@+id/food_page_new"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="80dp"
+                android:textSize="15sp"
+                android:text="最新"/>
+            <View
+                android:id="@+id/food_page_indicator"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="bottom"
+                android:background="@color/colorWhite"/>
+        </FrameLayout>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/food_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
