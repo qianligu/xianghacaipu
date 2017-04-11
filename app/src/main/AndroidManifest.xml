@@ -19,13 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.food.activity.TuijianAllActivity" />
-        <activity android:name=".ui.food.activity.DetailActivity"/>
+        <activity android:name=".ui.food.activity.DetailActivity" />
         <activity android:name=".ui.cook.activity.FoodVodieActivity" />
         <activity android:name=".ui.cook.activity.DinnerActivity" />
         <activity android:name=".ui.cook.activity.SearchActivity" />
         <activity android:name=".ui.cook.activity.SearchDetailActivity" />
         <activity android:name=".ui.cook.activity.JXMenuActivity" />
-        <activity android:name=".ui.cook.activity.PopularActivity"></activity>
+        <activity android:name=".ui.cook.activity.PopularActivity" />
+        <activity android:name=".ui.cook.activity.BookActivity"></activity>
     </application>
 
 </manifest>

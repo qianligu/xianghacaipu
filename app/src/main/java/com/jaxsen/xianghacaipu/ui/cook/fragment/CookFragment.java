@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.jaxsen.xianghacaipu.R;
 import com.jaxsen.xianghacaipu.R2;
+import com.jaxsen.xianghacaipu.ui.cook.activity.BookActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.DinnerActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.JXMenuActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.SearchActivity;
@@ -59,6 +60,8 @@ public class CookFragment extends BaseFragment<BannerListPresenter, BannerListMo
 
     @BindView(R2.id.layout_search)
     LinearLayout search;
+    @BindView(R2.id.fragment_cook_book)
+    TextView mBook;
 
 
     public static final String TAG = CookFragment.class.getName();
@@ -81,6 +84,7 @@ public class CookFragment extends BaseFragment<BannerListPresenter, BannerListMo
         initNous();
         initUser();
         search.setOnClickListener(this);
+        mBook.setOnClickListener(this);
     }
 
 
@@ -177,7 +181,15 @@ public class CookFragment extends BaseFragment<BannerListPresenter, BannerListMo
 
     @Override
     public void onClick(View v) {
-        startActivity(new Intent(getActivity(), SearchActivity.class));
+        switch (v.getId()) {
+            case R.id.layout_search:
+                startActivity(new Intent(getActivity(), SearchActivity.class));
+                break;
+            case R.id.fragment_cook_book:
+                startActivity(new Intent(getActivity(), BookActivity.class));
+                break;
+        }
+
     }
 
     @OnClick(R2.id.fragment_cook_topic_image)
