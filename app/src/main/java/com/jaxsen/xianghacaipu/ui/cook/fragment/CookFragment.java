@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.jaxsen.xianghacaipu.R;
 import com.jaxsen.xianghacaipu.R2;
 import com.jaxsen.xianghacaipu.ui.cook.activity.DinnerActivity;
+import com.jaxsen.xianghacaipu.ui.cook.activity.JXMenuActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.SearchActivity;
 import com.jaxsen.xianghacaipu.ui.cook.adapter.NousAdapter;
 import com.jaxsen.xianghacaipu.ui.cook.adapter.UserAdapter;
@@ -33,10 +34,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 
-public class CookFragment extends BaseFragment<BannerListPresenter,BannerListModel> implements CookContract.View, ViewPager.OnPageChangeListener, OnBannerListener, View.OnClickListener {
-   @BindView(R2.id.banner)
+public class CookFragment extends BaseFragment<BannerListPresenter, BannerListModel> implements CookContract.View, ViewPager.OnPageChangeListener, OnBannerListener, View.OnClickListener {
+    @BindView(R2.id.banner)
     Banner mBanner;
     private List<String> images;
 
@@ -70,7 +72,7 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
     @Override
     protected void initPresenter() {
-        mPresenter.setVM(this,mModel);
+        mPresenter.setVM(this, mModel);
         mPresenter.getBannerList();
     }
 
@@ -80,7 +82,6 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
         initUser();
         search.setOnClickListener(this);
     }
-
 
 
     @Override
@@ -107,7 +108,7 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
     }
 
-    private void setBanner(List<BannerList.DataBean.BannerData> bannerData){
+    private void setBanner(List<BannerList.DataBean.BannerData> bannerData) {
         images = new ArrayList<>();
         for (int i = 0; i < bannerData.size(); i++) {
             images.add(bannerData.get(i).getImg());
@@ -120,7 +121,7 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
 
     private void initNous() {
-        nousAdapter = new NousAdapter(getActivity(),null);
+        nousAdapter = new NousAdapter(getActivity(), null);
         nous.setAdapter(nousAdapter);
         LinearLayoutManager nousManager = new LinearLayoutManager(getActivity());
         nousManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -128,7 +129,7 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
     }
 
     private void initUser() {
-        userAdapter = new UserAdapter(getActivity(),null);
+        userAdapter = new UserAdapter(getActivity(), null);
         user.setAdapter(userAdapter);
         LinearLayoutManager userManager = new LinearLayoutManager(getActivity());
         userManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -136,10 +137,11 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
     }
 
 
-    private void setTopic(BannerList.DataBean.TopicData topicData){
+    private void setTopic(BannerList.DataBean.TopicData topicData) {
         Glide.with(getActivity()).load(topicData.getImgs()).into(topic_image);
         topic_subTitle.setText(topicData.getSubtitle());
         topic_title.setText(topicData.getTitle());
+
     }
 
     @Override
@@ -149,11 +151,11 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
     @Override
     public void onPageSelected(int position) {
-        if (position==1||position==4) {
+        if (position == 1 || position == 4) {
             iv.setImageResource(R.mipmap.i_ico_homepage_sancan_zao);
-        }else if (position==2){
+        } else if (position == 2) {
             iv.setImageResource(R.mipmap.i_ico_homepage_sancan_zhong);
-        }else if(position==3){
+        } else if (position == 3) {
             iv.setImageResource(R.mipmap.i_ico_homepage_sancan_wan);
         }
     }
@@ -165,9 +167,9 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
     @Override
     public void OnBannerClick(int i) {
-        Log.e(TAG, "OnBannerClick:当前点击项为 "+i );
+        Log.e(TAG, "OnBannerClick:当前点击项为 " + i);
         Bundle bundle = new Bundle();
-        bundle.putString("position",i+"");
+        bundle.putString("position", i + "");
         Intent intent = new Intent(getActivity(), DinnerActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
@@ -176,5 +178,10 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
     @Override
     public void onClick(View v) {
         startActivity(new Intent(getActivity(), SearchActivity.class));
+    }
+
+    @OnClick(R2.id.fragment_cook_topic_image)
+    public void imageOnClick(View view) {
+        startActivity(new Intent(getActivity(), JXMenuActivity.class));
     }
 }

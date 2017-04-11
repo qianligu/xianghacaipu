@@ -22,7 +22,9 @@
         <activity android:name=".ui.cook.activity.FoodVodieActivity" />
         <activity android:name=".ui.cook.activity.DinnerActivity" />
         <activity android:name=".ui.cook.activity.SearchActivity" />
-        <activity android:name=".ui.cook.activity.SearchDetailActivity"></activity>
+        <activity android:name=".ui.cook.activity.SearchDetailActivity" />
+        <activity android:name=".ui.cook.activity.JXMenuActivity" />
+        <activity android:name=".ui.cook.activity.PopularActivity"></activity>
     </application>
 
 </manifest>
