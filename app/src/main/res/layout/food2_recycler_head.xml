@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/food2_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/food2_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:text="推荐圈子"
+            android:textColor="@color/colorGray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/food2_tuijian_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:drawableRight="@mipmap/enter_matchwords_item"
+            android:text="全部"
+            android:textColor="@color/colorGray"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/food2_tuijian_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/food2_tuijian"
+            android:background="#dcdcdc" />
+
+        <LinearLayout
+            android:id="@+id/food2_grid"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/food2_tuijian_line"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="秀美食"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:background="#fff"/>
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="烘培"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:background="#fff"/>
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="出去吃"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:background="#fff"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="厨艺交流"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:background="#fff"/>
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="聊家常"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:background="#fff"/>
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="生活窍门"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:background="#fff"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/food2_title_in"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/food2_title"
+        android:background="#e3dbab" />
+</LinearLayout>

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.GridView;
 
+import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
 import com.jaxsen.xianghacaipu.R;
 import com.jaxsen.xianghacaipu.R2;
 import com.jaxsen.xianghacaipu.ui.food.adapter.GrideAdapter;
@@ -22,12 +23,9 @@ public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implement
 
 
     private static final String TAG = FoodTwoPage.class.getSimpleName();
-    @BindView(R.id.food2_grid)
-    GridView mGridView;
 
     @BindView(R2.id.food2_recyclerView)
     RecyclerView mRecyclerView;
-    private GrideAdapter GridAdapter;
     private NewRecyclerAdapter mRadapter;
 
     @Override
@@ -43,11 +41,11 @@ public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implement
 
     @Override
     public void initView() {
-        GridAdapter = new GrideAdapter(getActivity(),null);
-        mGridView.setAdapter(GridAdapter);
 
         mRadapter = new NewRecyclerAdapter(getActivity(),null);
         mRecyclerView.setAdapter(mRadapter);
+        RecyclerViewHeader header = RecyclerViewHeader.fromXml(getActivity(), R.layout.food2_recycler_head);
+        header.attachTo(mRecyclerView);
     }
 
 
@@ -70,8 +68,6 @@ public class FoodTwoPage extends BaseFragment<DataPresenter,DataModel> implement
     public void returnList(ParseNew parseNew) {
 
         Log.e(TAG, "returnList: " +parseNew.getRes());
-
-        GridAdapter.addRes(parseNew.getData().getData().get(0).getList());
         mRadapter.upDataRes(parseNew.getData().getData());
     }
 }

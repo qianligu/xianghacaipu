@@ -4,67 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/food2_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/food2_tuijian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="8dp"
-            android:text="推荐圈子"
-            android:textColor="@color/colorGray"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/food2_tuijian_all"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_margin="8dp"
-            android:drawableRight="@mipmap/enter_matchwords_item"
-            android:text="全部"
-            android:textColor="@color/colorGray"
-            android:textSize="15sp" />
-
-        <View
-            android:id="@+id/food2_tuijian_line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/food2_tuijian"
-            android:background="#dcdcdc" />
-
-        <GridView
-            android:id="@+id/food2_grid"
-            android:layout_width="match_parent"
-            android:layout_height="77dp"
-            android:layout_below="@id/food2_tuijian_line"
-            android:background="#dcdcdc"
-            android:horizontalSpacing="1dp"
-            android:numColumns="3"
-            android:scrollbars="none"
-            android:verticalSpacing="1dp" />
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/food2_line"
-        android:layout_below="@id/food2_title"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="#e3dbab" />
+<!--android:layout_below="@id/food2_title_in"-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/food2_recyclerView"
-        android:layout_below="@id/food2_line"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        app:layoutManager="LinearLayoutManager" />
 
 
 </RelativeLayout>

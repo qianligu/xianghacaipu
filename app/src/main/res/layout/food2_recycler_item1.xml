@@ -52,8 +52,7 @@
         android:ellipsize="end"
         android:maxLines="3"
         android:textSize="17sp"
-        android:textColor="@color/colorBlack"
-        android:text="文章" />
+        android:textColor="@color/colorBlack" />
 
     <LinearLayout
         android:id="@+id/info_images"
