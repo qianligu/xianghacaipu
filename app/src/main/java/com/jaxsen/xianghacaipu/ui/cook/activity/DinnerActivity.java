@@ -1,5 +1,7 @@
 package com.jaxsen.xianghacaipu.ui.cook.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -16,6 +18,7 @@ import java.util.List;
 import butterknife.BindView;
 
 public class DinnerActivity extends BaseActivity {
+    private static final String TAG = DinnerActivity.class.getSimpleName();
     @BindView(R2.id.activity_dinner_tab)
     TabLayout tabLayout;
     @BindView(R2.id.activity_dinner_vp)
@@ -45,8 +48,16 @@ public class DinnerActivity extends BaseActivity {
         fragments.add(new DinnerFragment("1"));
         fragments.add(new DinnerFragment("2"));
         fragments.add(new DinnerFragment("3"));
-        dinnerPagerAdapter = new DinnerPagerAdapter(getSupportFragmentManager(),fragments,titles);
+        dinnerPagerAdapter = new DinnerPagerAdapter(getSupportFragmentManager(), fragments, titles);
         vp.setAdapter(dinnerPagerAdapter);
         tabLayout.setupWithViewPager(vp);
+
+    }
+
+    private String getPosition() {
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        String position = bundle.getString("position");
+        return position;
     }
 }

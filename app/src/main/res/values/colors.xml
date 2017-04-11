@@ -8,6 +8,7 @@
     <color name="colorOrange">#ff5f57</color>
     <color name="colorBlack">#050505</color>
     <color name="colorGray">#a39b9b</color>
-
+    <color name="colorOrange3">#da4a4a</color>
     <color name="colorGray3">#f7efef</color>
+    <color name="colorRed">#c10c03</color>
 </resources>

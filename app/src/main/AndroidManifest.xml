@@ -18,9 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.food.activity.TuijianAllActivity"></activity>
+        <activity android:name=".ui.food.activity.TuijianAllActivity" />
         <activity android:name=".ui.cook.activity.FoodVodieActivity" />
-        <activity android:name=".ui.cook.activity.DinnerActivity"></activity>
+        <activity android:name=".ui.cook.activity.DinnerActivity" />
+        <activity android:name=".ui.cook.activity.SearchActivity" />
+        <activity android:name=".ui.cook.activity.SearchDetailActivity"></activity>
     </application>
 
 </manifest>

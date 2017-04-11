@@ -2,16 +2,21 @@ package com.jaxsen.xianghacaipu.ui.cook.fragment;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.jaxsen.xianghacaipu.R;
 import com.jaxsen.xianghacaipu.R2;
 import com.jaxsen.xianghacaipu.ui.cook.activity.DinnerActivity;
+import com.jaxsen.xianghacaipu.ui.cook.activity.SearchActivity;
 import com.jaxsen.xianghacaipu.ui.cook.adapter.NousAdapter;
 import com.jaxsen.xianghacaipu.ui.cook.adapter.UserAdapter;
 import com.jaxsen.xianghacaipu.ui.cook.bean.BannerList;
@@ -30,7 +35,7 @@ import java.util.List;
 import butterknife.BindView;
 
 
-public class CookFragment extends BaseFragment<BannerListPresenter,BannerListModel> implements CookContract.View, ViewPager.OnPageChangeListener, OnBannerListener {
+public class CookFragment extends BaseFragment<BannerListPresenter,BannerListModel> implements CookContract.View, ViewPager.OnPageChangeListener, OnBannerListener, View.OnClickListener {
    @BindView(R2.id.banner)
     Banner mBanner;
     private List<String> images;
@@ -49,6 +54,10 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
     @BindView(R2.id.fragment_cook_iv)
     ImageView iv;
+
+    @BindView(R2.id.layout_search)
+    LinearLayout search;
+
 
     public static final String TAG = CookFragment.class.getName();
     private NousAdapter nousAdapter;
@@ -69,6 +78,7 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
     public void initView() {
         initNous();
         initUser();
+        search.setOnClickListener(this);
     }
 
 
@@ -155,6 +165,16 @@ public class CookFragment extends BaseFragment<BannerListPresenter,BannerListMod
 
     @Override
     public void OnBannerClick(int i) {
-        startActivity(new Intent(getActivity(), DinnerActivity.class));
+        Log.e(TAG, "OnBannerClick:当前点击项为 "+i );
+        Bundle bundle = new Bundle();
+        bundle.putString("position",i+"");
+        Intent intent = new Intent(getActivity(), DinnerActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getActivity(), SearchActivity.class));
     }
 }
