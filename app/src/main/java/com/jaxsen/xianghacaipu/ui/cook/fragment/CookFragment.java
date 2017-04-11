@@ -18,6 +18,7 @@ import com.jaxsen.xianghacaipu.R2;
 import com.jaxsen.xianghacaipu.ui.cook.activity.BookActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.DinnerActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.JXMenuActivity;
+import com.jaxsen.xianghacaipu.ui.cook.activity.PopularActivity;
 import com.jaxsen.xianghacaipu.ui.cook.activity.SearchActivity;
 import com.jaxsen.xianghacaipu.ui.cook.adapter.NousAdapter;
 import com.jaxsen.xianghacaipu.ui.cook.adapter.UserAdapter;
@@ -195,5 +196,10 @@ public class CookFragment extends BaseFragment<BannerListPresenter, BannerListMo
     @OnClick(R2.id.fragment_cook_topic_image)
     public void imageOnClick(View view) {
         startActivity(new Intent(getActivity(), JXMenuActivity.class));
+    }
+
+    @OnClick(R2.id.fragment_cook_user)
+    public void popularOnClick(View view) {
+        startActivity(new Intent(getActivity(), PopularActivity.class));
     }
 }

@@ -2,16 +2,27 @@ package com.jaxsen.xianghacaipu.ui.cook.presenter;
 
 import com.jaxsen.xianghacaipu.ui.cook.bean.SearchData;
 import com.jaxsen.xianghacaipu.ui.cook.contract.SearchContract;
-import rx.functions.Action1;
+
+import rx.Subscriber;
 
 public class SearchListPresenter extends SearchContract.Presenter {
 
     @Override
     public void getSearchList() {
-        mModel.getSearchList().subscribe(new Action1<SearchData>() {
+        mModel.getSearchList().subscribe(new Subscriber<SearchData>() {
             @Override
-            public void call(SearchData searchList) {
-                mView.returnSearchList(searchList);
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+
+            }
+
+            @Override
+            public void onNext(SearchData searchData) {
+                mView.returnSearchList(searchData);
             }
         });
     }

@@ -2,6 +2,7 @@ package com.jaxsen.xianghacaipu.ui.cook.api;
 
 import com.jaxsen.xianghacaipu.ui.cook.bean.BannerList;
 import com.jaxsen.xianghacaipu.ui.cook.bean.DinnerList;
+import com.jaxsen.xianghacaipu.ui.cook.bean.EpicureList;
 import com.jaxsen.xianghacaipu.ui.cook.bean.JXMenuList;
 import com.jaxsen.xianghacaipu.ui.cook.bean.SearchData;
 import com.jaxsen.xianghacaipu.ui.cook.bean.SearchDetailList;
@@ -27,4 +28,7 @@ public interface ApiService {
 
     @GET("main5/caipu/getDishList?type=caidan")
     Observable<JXMenuList> getJXMenuList(@Query("g1")String g1,@Query("page")String page);
+
+    @GET("/main5/quan/getUserTop?type=day&page=1")
+    Observable<EpicureList> getEpicureList(@Query("type") String type, @Query("page") String page);
 }
