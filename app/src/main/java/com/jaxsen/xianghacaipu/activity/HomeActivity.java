@@ -1,16 +1,18 @@
 package com.jaxsen.xianghacaipu.activity;
 
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.jaxsen.xianghacaipu.R;
-import com.jaxsen.xianghacaipu.R2;
 import com.jaxsen.xianghacaipu.ui.cook.fragment.CookFragment;
 import com.jaxsen.xianghacaipu.ui.food.fragment.FoodFragment;
 import com.jaxsen.xianghacaipu.ui.message.fragment.MessageFragment;
@@ -25,15 +27,24 @@ import butterknife.OnClick;
 
 public class HomeActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
     public static final String TAG = HomeActivity.class.getSimpleName();
+    @BindView(R.id.cook_rb)
+    RadioButton cook;
+    @BindView(R.id.rg_layout_home_bottom)
+    RadioGroup mRadioGroup;
     private Fragment mShowFragment;
+
     //双击退出的标志
     private boolean isExit;
+    private int[] imgs = {R.drawable.cook_selector, R.drawable.food_selector,-1, R.drawable.message_selector, R.drawable.mine_selector};
 
-    @BindView(R2.id.rg_layout_home_bottom)
-    RadioGroup mRadioGroup;
-    @BindView(R2.id.cook_rb)
-    RadioButton cook;
-
+    private void initState() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            //透明状态栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //透明导航栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+    }
 
     @Override
     public int getLayoutId() {
@@ -47,9 +58,22 @@ public class HomeActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void initView() {
+        initState();
+        initButton();
         cook.setChecked(true);
         choiceFragment(CookFragment.TAG);
         mRadioGroup.setOnCheckedChangeListener(this);
+    }
+
+    private void initButton() {
+        for (int i = 0; i < mRadioGroup.getChildCount(); i++) {
+            if(i!=2){
+                RadioButton rb = (RadioButton) mRadioGroup.getChildAt(i);
+                Drawable d = getResources().getDrawable(imgs[i]);
+                d.setBounds(0, 0, 50, 50);
+                rb.setCompoundDrawables(null, d, null, null);
+            }
+        }
     }
 
     //点击展示对应的Fragment
@@ -115,8 +139,10 @@ public class HomeActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         }
     }
 
-    @OnClick(R2.id.post_iv)
-    public void postMenuClick(View view){
+    @OnClick(R.id.post_iv)
+    public void postMenuClick(View view) {
         Toast.makeText(this, "晒菜谱", Toast.LENGTH_SHORT).show();
     }
+
+
 }

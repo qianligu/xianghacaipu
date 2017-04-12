@@ -1,12 +1,13 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context="com.jaxsen.xianghacaipu.ui.cook.fragment.CookFragment">
 
     <LinearLayout
+        android:id="@+id/toolbar_ll_message"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/colorOrange"
@@ -31,5 +32,47 @@
             android:textColor="@color/colorWhite"
             android:textSize="20sp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/toolbar_ll_message"
+        android:id="@+id/mishu_ll_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30px"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:src="@mipmap/z_home_nav_ico_caipu"
+        />
+    <TextView
+        android:layout_marginLeft="30px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="香哈小秘书"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:textColor="#5FDE21"
+        />
 
-</LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录后显示您的消息"
+            android:textSize="18sp"
+            />
+        <Button
+            android:id="@+id/tologin_message"
+            android:layout_width="500px"
+            android:layout_height="150px"
+            android:layout_gravity="center"
+            android:text="请登录"
+            />
+    </LinearLayout>
+</RelativeLayout>

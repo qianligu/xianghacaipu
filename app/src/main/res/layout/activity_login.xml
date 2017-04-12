@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jaxsen.xianghacaipu.activity.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tollbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_below="@id/tollbar_login"
+        android:layout_marginTop="100px"
+        android:gravity="center"
+        android:text="欢迎来到香哈"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tollbar_login"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:layout_marginTop="300px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_margin="20px"
+                android:src="@mipmap/a_login_icon_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_margin="20px"
+                android:background="@color/colorGray" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="手机号"
+                android:background="@null"
+                android:textColor="@color/colorGray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_margin="20px"
+                android:src="@mipmap/a_login_icon_phone" />
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="120px"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:textColor="@color/colorGray" />
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/a_login_button_password"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorGray" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px"
+            android:background="@color/colorOrange"
+            android:padding="8px"
+            android:text="登录"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="540px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="40px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证登陆码" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="40px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码？" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="50px"
+            android:src="@mipmap/a_login_button_qq" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="50px"
+            android:src="@mipmap/a_login_button_weixin" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="50px"
+            android:src="@mipmap/a_login_button_xinliang" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="50px"
+            android:src="@mipmap/a_login_button_youxiang" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -6,34 +6,36 @@
     tools:context="com.jaxsen.xianghacaipu.ui.cook.fragment.CookFragment">
 
     <LinearLayout
+        android:paddingTop="30px"
         android:id="@+id/layout_go_login"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="420px"
         android:background="@color/colorOrange"
+       android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="240px"
+            android:layout_height="240px"
+            android:layout_marginLeft="20px"
             android:src="@mipmap/z_me_head" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
             android:drawableRight="@mipmap/z_myself_icon_go_white"
             android:gravity="center_vertical"
-            android:text="请登录，注册"
+            android:text="请登录/注册"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="50px" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="48px"
+        android:layout_margin="10px"
         android:orientation="horizontal">
 
         <TextView
@@ -43,7 +45,7 @@
             android:gravity="center"
             android:text="0"
             android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -52,12 +54,12 @@
             android:gravity="center"
             android:text="0"
             android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:orientation="horizontal">
 
         <TextView
@@ -81,7 +83,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="40px"
         android:background="@color/colorGray3" />
 
     <LinearLayout
@@ -91,25 +93,29 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-
+            <ImageView
+                android:layout_margin="20px"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/z_me_list_ico_collect"
+                />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@mipmap/z_me_list_ico_collect"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:text="我的收藏"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_marginRight="10dp"
                 android:src="@mipmap/z_myself_ico_go" />
         </LinearLayout>
@@ -121,24 +127,29 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
-
+            <ImageView
+                android:layout_margin="20px"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/z_me_list_ico_download"
+                />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@mipmap/z_me_list_ico_download"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:text="我的下载"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_marginRight="10dp"
                 android:src="@mipmap/z_myself_ico_go" />
         </LinearLayout>
@@ -150,24 +161,29 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
-
+            <ImageView
+                android:layout_margin="20px"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/z_me_list_ico_see"
+                />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@mipmap/z_me_list_ico_see"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:text="浏览历史"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_marginRight="10dp"
                 android:src="@mipmap/z_myself_ico_go" />
         </LinearLayout>
@@ -179,24 +195,29 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
-
+            <ImageView
+                android:layout_margin="20px"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/z_me_list_ico_integral"
+                />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@mipmap/z_me_list_ico_integral"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:text="我的积分"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_marginRight="10dp"
                 android:src="@mipmap/z_myself_ico_go" />
         </LinearLayout>
@@ -208,24 +229,29 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
-
+            <ImageView
+                android:layout_margin="20px"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/z_me_list_ico_order"
+                />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@mipmap/z_me_list_ico_order"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:text="我的订单"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_marginRight="10dp"
                 android:src="@mipmap/z_myself_ico_go" />
         </LinearLayout>
@@ -233,28 +259,34 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="40px"
         android:background="@color/colorGray3" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_height="130px"
+        android:layout_marginLeft="30px"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
-
+        <ImageView
+            android:layout_margin="20px"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@mipmap/z_me_list_ico_setting"
+            />
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawableLeft="@mipmap/z_me_list_ico_setting"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
             android:text="系统设置"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="50px"
+            android:layout_height="50px"
             android:layout_marginRight="10dp"
             android:src="@mipmap/z_myself_ico_go" />
     </LinearLayout>
@@ -262,7 +294,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
+        android:paddingTop="50px"
         android:background="@color/colorGray3"
         android:gravity="center"
         android:text="版本号：5.1.6" />
